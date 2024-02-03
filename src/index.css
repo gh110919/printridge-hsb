@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+@media (min-width: 1920px) {
+  body,
+  main,
+  header,
+  footer {
+    max-width: 1440px;
+  }
+}
+
+@media (max-width: 1920px) {
+  body,
+  main,
+  header,
+  footer {
+    max-width: 1440px;
+  }
+}
+
+@media (max-width: 1440px) {
+  body,
+  main,
+  header,
+  footer {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body,
+  main,
+  header,
+  footer {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  body,
+  main,
+  header,
+  footer {
+    max-width: 375px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 36px;
+  background: #001027;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
