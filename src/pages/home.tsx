@@ -2,32 +2,33 @@ import styled from "styled-components";
 import { Layout } from "../components/layout";
 import refil from "/images/refil.svg";
 import repair from "/images/repair.svg";
+import { Image_ } from "../components/image";
 
 const Box = styled.div`
   display: flex;
-  width: 1368px;
-  height: 324px;
-  padding: 50px;
+  width: calc(1368 * var(--dv));
+  height: calc(324 * var(--dv));
+  padding: calc(50 * var(--dv));
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 40px;
+  border-radius: calc(40 * var(--dv));
   background: var(--White, #fff);
 `;
 
 const Title = styled.h2<{ color: string }>`
   color: ${(props) => props.color};
   font-family: "Fira Sans";
-  font-size: 46px;
+  font-size: calc(46 * var(--dv));
   font-style: normal;
   font-weight: 500;
-  line-height: 110%; /* 50.6px */
+  line-height: 110%; /* calc(50.6 * var(--dv)) */
 `;
 
 const Subtitle = styled.h2<{ color: string }>`
   color: ${(props) => props.color};
   font-family: "Fira Sans";
-  font-size: 24px;
+  font-size: calc(24 * var(--dv));
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -35,37 +36,37 @@ const Subtitle = styled.h2<{ color: string }>`
 
 const Container = styled.div`
   display: flex;
-  width: 970px;
+  width: calc(970 * var(--dv));
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: calc(24 * var(--dv));
   flex-shrink: 0;
   align-self: stretch;
 `;
 
 const Package = styled.div`
   display: flex;
-  width: 1368px;
-  padding: 50px;
+  width: calc(1368 * var(--dv));
+  padding: calc(50 * var(--dv));
   justify-content: space-between;
   align-items: center;
-  border-radius: 40px;
+  border-radius: calc(40 * var(--dv));
   background: #005ce5;
 `;
 
 const Button = styled.button`
   display: flex;
-  width: 200px;
-  height: 100px;
-  padding: 0px 21px;
+  width: calc(200 * var(--dv));
+  height: calc(100 * var(--dv));
+  padding: calc(0 * var(--dv)) calc(21 * var(--dv));
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 20px;
+  border-radius: calc(20 * var(--dv));
   background: #001027;
   color: var(--White, #fff);
   font-family: "Fira Sans";
-  font-size: 18px;
+  font-size: calc(18 * var(--dv));
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -75,10 +76,10 @@ const Button = styled.button`
 
 const Division = styled.div`
   display: flex;
-  width: 970px;
+  width: calc(970 * var(--dv));
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: calc(24 * var(--dv));
   flex-shrink: 0;
   align-self: stretch;
 `;
@@ -108,7 +109,7 @@ export const Home = () => {
               <Title color="#005CE5">{e.title}</Title>
               <Subtitle color="#0C0C0C">{e.subtitle}</Subtitle>
             </Container>
-            <img src={e.image} alt={e.title} />
+            <Image_ src={e.image} width={100} height={100} />
           </Box>
         );
       })}

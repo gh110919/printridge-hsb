@@ -8,7 +8,7 @@ const Main = styled.main`
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: calc(24 * var(--dv));
 `;
 
 export const Layout = (props: { children?: ReactNode }) => {

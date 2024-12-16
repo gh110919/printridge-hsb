@@ -4,29 +4,30 @@ import { Logo } from "./logo";
 import { Link } from "./link";
 import vkontakte from "/images/vkontakte.svg";
 import telegram from "/images/telegram.svg";
+import { Image_ } from "./image";
 
 const Footer_ = styled.footer`
   display: flex;
-  gap: 24px;
-  margin-top: 24px;
+  gap: calc(24 * var(--dv));
+  margin-top: calc(24 * var(--dv));
 `;
 
 const Box = styled.div`
   display: flex;
-  width: 672px;
-  height: 324px;
-  padding: 50px;
+  width: calc(672 * var(--dv));
+  height: calc(324 * var(--dv));
+  padding: calc(50 * var(--dv));
   align-items: flex-start;
-  gap: 50px;
+  gap: calc(50 * var(--dv));
   flex-shrink: 0;
-  border-radius: 40px;
+  border-radius: calc(40 * var(--dv));
   background: #14243b;
 `;
 
 const Address = styled.p`
   color: var(--White, #fff);
   font-family: "Fira Sans";
-  font-size: 18px;
+  font-size: calc(18 * var(--dv));
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -35,9 +36,9 @@ const Address = styled.p`
 const Package = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: calc(32 * var(--dv));
   align-self: stretch;
-  width: 261px;
+  width: calc(261 * var(--dv));
 `;
 
 const Container = styled.div`
@@ -53,14 +54,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: calc(24 * var(--dv));
   text-align: start;
 `;
 
 const Terms = styled.a`
   color: var(--White, #fff);
   font-family: "Fira Sans";
-  font-size: 14px;
+  font-size: calc(14 * var(--dv));
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -87,19 +88,19 @@ const Division = styled.div`
 const Links = styled.div`
   color: var(--White, #fff);
   font-family: "Fira Sans";
-  font-size: 30px;
+  font-size: calc(30 * var(--dv));
   font-style: normal;
   font-weight: 500;
-  line-height: 110%; /* 33px */
+  line-height: 110%; /* calc(33 * var(--dv)) */
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: calc(24 * var(--dv));
 `;
 
 const Title = styled.h2`
   color: var(--White, #fff);
   font-family: "Fira Sans";
-  font-size: 18px;
+  font-size: calc(18 * var(--dv));
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -108,33 +109,33 @@ const Title = styled.h2`
 const Contact = styled.a`
   color: var(--White, #fff);
   font-family: "Fira Sans";
-  font-size: 30px;
+  font-size: calc(30 * var(--dv));
   font-style: normal;
   font-weight: 500;
-  line-height: 110%; /* 33px */
+  line-height: 110%; /* calc(33 * var(--dv)) */
 `;
 
-const Image = styled.div`
+const ImageBox = styled.div`
   display: flex;
-  width: 60px;
-  height: 60px;
-  padding: 10px;
+  width: calc(60 * var(--dv));
+  height: calc(60 * var(--dv));
+  padding: calc(10 * var(--dv));
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: calc(10 * var(--dv));
   flex-shrink: 0;
-  border-radius: 20px;
+  border-radius: calc(20 * var(--dv));
   background: #005ce5;
 `;
 
 const Images = styled.div`
   display: flex;
-  width: 144px;
+  width: calc(144 * var(--dv));
   align-items: end;
-  gap: 24px;
+  gap: calc(24 * var(--dv));
   flex-shrink: 0;
-  height: 224px;
+  height: calc(224 * var(--dv));
 `;
 
 const links = [
@@ -150,7 +151,7 @@ export const Footer = () => {
       <Box>
         <Container>
           <Package>
-            <img src={location} alt="" />
+            <Image_ src={location} width={60} height={60} />
             <Address>
               Обуховской обороны, д. 116 корп. 1, лит. Е, <br />
               4-й этаж, Офис 408
@@ -181,12 +182,12 @@ export const Footer = () => {
         </Division>
 
         <Images>
-          <Image>
-            <img src={vkontakte} alt="" />
-          </Image>
-          <Image>
-            <img src={telegram} alt="" />
-          </Image>
+          <ImageBox>
+            <Image_ src={vkontakte} width={34} height={22} />
+          </ImageBox>
+          <ImageBox>
+            <Image_ src={telegram} width={27} height={26} />
+          </ImageBox>
         </Images>
       </Box>
     </Footer_>
